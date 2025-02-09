@@ -1,0 +1,224 @@
+/* General Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("src/assets/Images/Sky2.jpg");  
+}
+
+.container {
+  /*background: #fff;
+  border-radius: 20%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);*/
+  overflow: hidden;
+  width: 850px;
+  max-width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.container span {
+  font-size: 12px;
+  color: #777;
+}
+
+.container a {
+  /*color: #007bff;*/
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+.container form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  height: 100%;
+
+ 
+}
+
+.container input {
+  background: #f0f0f0;
+  border: none;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  color: black;
+}
+
+.container button {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.container button:hover {
+  background: #5547d7;
+}
+
+.icons a {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  font-size: 18px;
+  color: #555;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.icons a:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Sign-in and Sign-up Panels */
+.sign-in,
+.sign-up {
+  color: #000;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+  left: 0;
+  z-index: 2;
+  color: #000; 
+  
+}
+
+.container.active .sign-in {
+  transform: translateX(100%);
+}
+
+.sign-up {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Toggle Container */
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+}
+
+.container.active .toggle-container {
+  transform: translateX(-100%);
+}
+
+.toggle {
+  /*background: linear-gradient(135deg, #6c63ff, #5547d7);*/
+  
+  color: #fff;
+  position: relative;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+  transform: translateX(50%);
+}
+
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  background: linear-gradient(135deg, #6c63ff, #5547d7);
+}
+
+/* Toggle-left panel default position */
+.toggle-left {
+  transform: translateX(100%);
+  color: white; /* Text color */
+  transition: all 0.6s ease-in-out; /* Smooth transition */
+}
+
+/* When the container is active, bring toggle-left back into view */
+.container.active .toggle-left {
+  transform: translateX(0); /* Position it correctly */
+}
+
+
+.toggle-right {
+  transform: translateX(-50%);
+}
+
+.container.active .toggle-right {
+  transform: translateX(0%);
+}
+
+#NoAcc{
+  color: #ebebeb;
+  
+}
